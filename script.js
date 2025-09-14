@@ -90,10 +90,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
 async function loadBlogs() {
     try {
-        const response = await fetch('metadata-blog.csv');
+        const response = await fetch('metadata-blog.json'); 
         if (!response.ok) throw new Error('Network response was not ok');
-        const csvText = await response.text();
-        const blogs = parseCSV(csvText);
+        
+        const blogs = await response.json(); 
 
         const blogGridHome = document.querySelector('#blog .blog-grid');
         if (blogGridHome) {
@@ -110,10 +110,8 @@ async function loadBlogs() {
         }
     } catch (error) {
         console.error('Failed to load blogs:', error);
-        const blogGridHome = document.querySelector('#blog .blog-grid');
-        if(blogGridHome) blogGridHome.innerHTML = '<p style="text-align:center;">Could not load blog posts. Please try again later.</p>';
-        const blogGridPage = document.getElementById('blog-listing-grid');
-        if(blogGridPage) blogGridPage.innerHTML = '<p style="text-align:center;">Could not load blog posts. Please try again later.</p>';
+        const blogContainer = document.querySelector('#blog .blog-grid, #blog-listing-grid');
+        if(blogContainer) blogContainer.innerHTML = '<p style="text-align:center; width: 100%;">Could not load blog posts. Please try again later.</p>';
     }
 }
 
@@ -142,25 +140,4 @@ function createBlogCardHTML(blog) {
             <div class="date">${blog.date || ''}</div>
         </div>
     `;
-}
-
-function parseCSV(text) {
-    const lines = text.trim().replace(/\r/g, '').split('\n');
-    if (lines.length < 2) return [];
-    const headers = lines[0].split(',').map(h => h.trim());
-    const rows = [];
-    for (let i = 1; i < lines.length; i++) {
-        const values = lines[i].split(/,(?=(?:(?:[^"]*"){2})*[^"]*$)/);
-        if (values.length !== headers.length) continue;
-        const row = {};
-        for (let j = 0; j < headers.length; j++) {
-            let value = values[j].trim();
-            if (value.startsWith('"') && value.endsWith('"')) {
-                value = value.slice(1, -1).replace(/""/g, '"');
-            }
-            row[headers[j]] = value;
-        }
-        rows.push(row);
-    }
-    return rows;
 }
