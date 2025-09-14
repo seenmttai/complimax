@@ -8,22 +8,22 @@ public_folder: "/assets/images"
 
 collections:
   - name: "blog_metadata"
-    label: "Blog Posts (Homepage & Blog Page Listing)"
-    description: "Manage the list of blog posts that appear on the site. You can add, remove, or reorder posts here."
+    label: "Blog Posts (Edit as Raw CSV)"
+    description: "Directly edit the metadata-blog.csv file here. Be careful with commas and quotes."
     files:
-      - name: "blog_list"
-        label: "Blog Post List"
+      - name: "blog_csv_content"
+        label: "Blog CSV File"
         file: "metadata-blog.csv"
+        format: "frontmatter"
+        frontmatter_delimiters:
+          - "---"
+          - "---"
         fields:
-          - name: "posts"
-            label: "Blog Entries"
-            widget: "list"
-            fields:
-              - { label: "Title", name: "title", widget: "string" }
-              - { label: "Summary", name: "summary", widget: "text" }
-              - { label: "Link", name: "link", widget: "string", hint: "e.g., blogs/my-new-post.html" }
-              - { label: "Tag", name: "tag", widget: "string", hint: "e.g., Taxation, Compliance" }
-              - { label: "Date", name: "date", widget: "string", hint: "e.g., April 25, 2025" }
+          - name: "body"
+            label: "CSV Content"
+            widget: "markdown"
+            buttons: [] 
+            editor_components: [] 
 
   - name: "posts"
     label: "All Blog Post Files"
