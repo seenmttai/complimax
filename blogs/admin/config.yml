@@ -1,0 +1,35 @@
+backend:
+  name: git-gateway
+  branch: main 
+
+media_folder: "assets/images"
+public_folder: "/assets/images"
+
+collections:
+  - name: "blog_metadata"
+    label: "Blog Posts (Homepage & Blog Page Listing)"
+    description: "Manage which blog posts appear on the site. You must add a new entry here for every new post you create in 'All Blog Post Files'."
+    files:
+      - name: "blogs"
+        label: "Blog List"
+        file: "metadata-blog.csv"
+        format: "csv" 
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Summary", name: "summary", widget: "text" }
+          - { label: "Link", name: "link", widget: "string", hint: "e.g., blogs/my-new-post.html" }
+          - { label: "Tag", name: "tag", widget: "string", hint: "e.g., Taxation, Compliance" }
+          - { label: "Date", name: "date", widget: "string", hint: "e.g., April 15, 2025" }
+
+  - name: "posts"
+    label: "All Blog Post Files"
+    folder: "blogs"
+    create: true 
+    slug: "{{slug}}" 
+    extension: "html" 
+    format: "frontmatter" 
+    fields:
+      - name: "body"
+        label: "Full Blog Post HTML"
+        widget: "html"
+        hint: "Paste the full HTML for the blog post here, including <!DOCTYPE>, <html>, <head>, and <body> tags."
