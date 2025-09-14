@@ -1,6 +1,7 @@
 backend:
   name: git-gateway
   branch: master
+site_url: https://complimax.netlify.app
 
 media_folder: "assets/images"
 public_folder: "/assets/images"
@@ -8,26 +9,29 @@ public_folder: "/assets/images"
 collections:
   - name: "blog_metadata"
     label: "Blog Posts (Homepage & Blog Page Listing)"
-    description: "Manage which blog posts appear on the site. You must add a new entry here for every new post you create in 'All Blog Post Files'."
+    description: "Manage the list of blog posts that appear on the site. You can add, remove, or reorder posts here."
     files:
-      - name: "blogs"
-        label: "Blog List"
+      - name: "blog_list"
+        label: "Blog Post List"
         file: "metadata-blog.csv"
-        format: "csv" 
         fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Summary", name: "summary", widget: "text" }
-          - { label: "Link", name: "link", widget: "string", hint: "e.g., blogs/my-new-post.html" }
-          - { label: "Tag", name: "tag", widget: "string", hint: "e.g., Taxation, Compliance" }
-          - { label: "Date", name: "date", widget: "string", hint: "e.g., April 15, 2025" }
+          - name: "posts"
+            label: "Blog Entries"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Summary", name: "summary", widget: "text" }
+              - { label: "Link", name: "link", widget: "string", hint: "e.g., blogs/my-new-post.html" }
+              - { label: "Tag", name: "tag", widget: "string", hint: "e.g., Taxation, Compliance" }
+              - { label: "Date", name: "date", widget: "string", hint: "e.g., April 25, 2025" }
 
   - name: "posts"
     label: "All Blog Post Files"
     folder: "blogs"
-    create: true 
-    slug: "{{slug}}" 
-    extension: "html" 
-    format: "frontmatter" 
+    create: true
+    slug: "{{slug}}"
+    extension: "html"
+    format: "frontmatter"
     fields:
       - name: "body"
         label: "Full Blog Post HTML"
