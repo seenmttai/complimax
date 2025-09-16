@@ -14,13 +14,16 @@ collections:
       - name: "blog_list"
         label: "Blog Post List"
         file: "metadata-blog.json"
-        widget: "list"
         fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Summary", name: "summary", widget: "text" }
-          - { label: "Link", name: "link", widget: "string", hint: "e.g., blogs/my-new-post.html" }
-          - { label: "Tag", name: "tag", widget: "string", hint: "e.g., Taxation, Compliance" }
-          - { label: "Date", name: "date", widget: "string", hint: "e.g., April 25, 2025" }
+          - name: "posts"
+            label: "Blog Entries"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Summary", name: "summary", widget: "text" }
+              - { label: "Link", name: "link", widget: "string", hint: "e.g., blogs/my-new-post.html" }
+              - { label: "Tag", name: "tag", widget: "string", hint: "e.g., Taxation, Compliance" }
+              - { label: "Date", name: "date", widget: "string", hint: "e.g., April 25, 2025" }
 
   - name: "posts"
     label: "All Blog Post Files"
