@@ -63,24 +63,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    document.getElementById('quoteForm')?.addEventListener('submit', function(e) {
-        e.preventDefault();
-        const formData = new FormData(this);
-        const data = Object.fromEntries(formData);
-        const requiredFields = ['name', 'email', 'phone', 'country', 'service', 'consultation'];
-        const missingFields = requiredFields.filter(field => !data[field]);
-        if (missingFields.length > 0) {
-            alert('Please fill in all required fields: ' + missingFields.join(', '));
-            return;
-        }
-        const message = `Hello CompliMax! I'd like to request a quote:\n\nName: ${data.name}\n${data.business ? `Business: ${data.business}\n` : ''}Email: ${data.email}\nPhone: ${data.phone}\nCountry: ${data.country}\nService Needed: ${data.service}\nPreferred Consultation: ${data.consultation}\n${data.message ? `Message: ${data.message}` : ''}`;
-        const encodedMessage = encodeURIComponent(message);
-        const whatsappURL = `https://wa.me/918905209197?text=${encodedMessage}`;
-        window.open(whatsappURL, '_blank');
-        this.reset();
-        alert('Thank you! Your quote request has been sent. We\'ll contact you shortly.');
-    });
-
     const blogGridHome = document.querySelector('#blog .blog-grid');
     const blogGridPage = document.getElementById('blog-listing-grid');
     if (blogGridHome || blogGridPage) {
@@ -90,10 +72,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
 async function loadBlogs() {
     try {
-        const response = await fetch('metadata-blog.json');
+        const response = await fetch('metadata-blog.json'); 
         if (!response.ok) throw new Error('Network response was not ok');
         
-        const { posts } = await response.json();
+        const { posts } = await response.json(); 
 
         const blogGridHome = document.querySelector('#blog .blog-grid');
         if (blogGridHome) {
@@ -117,7 +99,7 @@ async function loadBlogs() {
 
 function displayBlogs(blogs, container) {
     container.innerHTML = '';
-    if (blogs.length === 0) {
+    if (!blogs || blogs.length === 0) {
         container.innerHTML = '<p style="text-align:center;">No blog posts found.</p>';
         return;
     }
