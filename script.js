@@ -90,14 +90,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
 async function loadBlogs() {
     try {
-        const response = await fetch('metadata-blog.json'); 
+        const response = await fetch('metadata-blog.json');
         if (!response.ok) throw new Error('Network response was not ok');
         
-        const blogs = await response.json(); 
+        const { posts } = await response.json();
 
         const blogGridHome = document.querySelector('#blog .blog-grid');
         if (blogGridHome) {
-            displayBlogs(blogs.slice(0, 3), blogGridHome);
+            displayBlogs(posts.slice(0, 3), blogGridHome);
             const exploreBtnContainer = document.querySelector('.blog-btn-container');
             if(exploreBtnContainer) {
                 exploreBtnContainer.innerHTML = `<a href="blog.html" class="btn btn-secondary">Explore All Articles</a>`;
@@ -106,7 +106,7 @@ async function loadBlogs() {
 
         const blogGridPage = document.getElementById('blog-listing-grid');
         if (blogGridPage) {
-            displayBlogs(blogs, blogGridPage);
+            displayBlogs(posts, blogGridPage);
         }
     } catch (error) {
         console.error('Failed to load blogs:', error);

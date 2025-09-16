@@ -9,21 +9,24 @@ public_folder: "/assets/images"
 collections:
   - name: "blog_metadata"
     label: "Blog Posts (Homepage & Blog Page Listing)"
-    description: "Manage the list of blog posts that appear on the site. You can add, remove, or reorder posts here."
+    description: "Manage the list of blog posts that appear on the site."
     files:
       - name: "blog_list"
         label: "Blog Post List"
         file: "metadata-blog.json"
+        format: "json"
         fields:
           - name: "posts"
             label: "Blog Entries"
             widget: "list"
+            label_singular: "Blog Post"
+            summary: "{{fields.title}} — {{fields.date}}"
             fields:
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Summary", name: "summary", widget: "text" }
-              - { label: "Link", name: "link", widget: "string", hint: "e.g., blogs/my-new-post.html" }
-              - { label: "Tag", name: "tag", widget: "string", hint: "e.g., Taxation, Compliance" }
-              - { label: "Date", name: "date", widget: "string", hint: "e.g., April 25, 2025" }
+              - { label: "Link", name: "link", widget: "string" }
+              - { label: "Tag", name: "tag", widget: "string" }
+              - { label: "Date", name: "date", widget: "string" }
 
   - name: "posts"
     label: "All Blog Post Files"

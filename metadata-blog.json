@@ -1,37 +1,39 @@
-[
-  {
-    "title": "Why Virtual CFO Services are Empowering Startups in 2025",
-    "summary": "A deep dive into how fractional CFOs provide strategic financial guidance to new businesses, helping them scale efficiently.",
-    "link": "blogs/virtual-cfo-2025.html",
-    "tag": "Virtual CFO",
-    "date": "March 26, 2025"
-  },
-  {
-    "title": "5 Strategies to Optimize Your Business Tax Liability",
-    "summary": "Discover actionable tips and legal strategies to minimize your tax burden and improve your bottom line.",
-    "link": "blogs/tax-optimization.html",
-    "tag": "Taxation",
-    "date": "March 22, 2025"
-  },
-  {
-    "title": "GST, TDS, and Payroll Compliance: 5 Common Mistakes to Avoid",
-    "summary": "Learn about the common pitfalls in compliance and how to ensure your business stays penalty-free.",
-    "link": "blogs/common-compliance-mistakes.html",
-    "tag": "Compliance",
-    "date": "March 18, 2025"
-  },
-  {
-    "title": "The Future of Accounting: AI and Automation",
-    "summary": "Explore how artificial intelligence is reshaping the accounting industry and what it means for your business.",
-    "link": "blogs/ai-in-accounting.html",
-    "tag": "Technology",
-    "date": "March 15, 2025"
-  },
-  {
-    "title": "Choosing the Right Business Structure: LLC vs. Corporation",
-    "summary": "A comprehensive guide to help you decide the best legal structure for your new venture.",
-    "link": "blogs/business-structure.html",
-    "tag": "Business Registration",
-    "date": "March 10, 2025"
-  }
-]
+{
+  "posts": [
+    {
+      "title": "Why Virtual CFO Services are Empowering Startups in 2025",
+      "summary": "A deep dive into how fractional CFOs provide strategic financial guidance to new businesses, helping them scale efficiently.",
+      "link": "blogs/virtual-cfo-2025.html",
+      "tag": "Virtual CFO",
+      "date": "March 26, 2025"
+    },
+    {
+      "title": "5 Strategies to Optimize Your Business Tax Liability",
+      "summary": "Discover actionable tips and legal strategies to minimize your tax burden and improve your bottom line.",
+      "link": "blogs/tax-optimization.html",
+      "tag": "Taxation",
+      "date": "March 22, 2025"
+    },
+    {
+      "title": "GST, TDS, and Payroll Compliance: 5 Common Mistakes to Avoid",
+      "summary": "Learn about the common pitfalls in compliance and how to ensure your business stays penalty-free.",
+      "link": "blogs/common-compliance-mistakes.html",
+      "tag": "Compliance",
+      "date": "March 18, 2025"
+    },
+    {
+      "title": "The Future of Accounting: AI and Automation",
+      "summary": "Explore how artificial intelligence is reshaping the accounting industry and what it means for your business.",
+      "link": "blogs/ai-in-accounting.html",
+      "tag": "Technology",
+      "date": "March 15, 2025"
+    },
+    {
+      "title": "Choosing the Right Business Structure: LLC vs. Corporation",
+      "summary": "A comprehensive guide to help decide the best legal structure for a new venture.",
+      "link": "blogs/business-structure.html",
+      "tag": "Business Registration",
+      "date": "March 10, 2025"
+    }
+  ]
+}
