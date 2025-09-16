@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Taxation Services - CompliMax</title>
+    <meta name="description" content="Expert taxation solutions to keep your business compliant. We handle direct and indirect tax, GST, TDS, international tax, and tax planning.">
     <link rel="icon" href="https://complimax.com/wp-content/uploads/2025/03/cropped-CompliMax_Horizontal_Logo-removebg-1-32x32.png">
     <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
     <header class="main-header" id="header"></header>
@@ -22,7 +24,6 @@
                 <p>Navigating India’s complex tax laws, regulations, and compliance requirements can be overwhelming for businesses. At Complimax, our team of expert Chartered Accountants ensures error-free tax filing, strategic tax planning, and full regulatory compliance, so you never have to worry about penalties or defaults.</p>
                 <p>We provide customized taxation solutions tailored to your business needs, whether you’re a startup, SME, or large corporation.</p>
                 <p><strong>📌 Stay compliant, minimize tax liabilities, and focus on business growth—let us handle the taxes!</strong></p>
-                
                 <h2>💼 Our Taxation Services</h2>
                 <div class="service-page-grid">
                     <div class="service-item"><h3>✅ Direct Taxation Services</h3><p>Income Tax Filing & Compliance, Tax Audits & Assessments, Capital Gains Tax Advisory, Tax Deduction at Source (TDS) Compliance.</p></div>
@@ -32,7 +33,6 @@
                     <div class="service-item"><h3>✅ Litigation & Compliance Assistance</h3><p>Representation Before Tax Authorities, Handling Notices, Scrutiny, & Appeals.</p></div>
                 </div>
                 <p><strong>📌 Our team ensures your business remains tax-compliant while optimizing savings through strategic tax planning.</strong></p>
-
                 <h2>🔹 Why Choose Complimax?</h2>
                 <ul>
                     <li>✔ Expert Tax Professionals – Our Chartered Accountants specialize in Indian direct and indirect taxation laws.</li>
@@ -82,18 +82,5 @@
     <footer id="footer" class="main-footer"></footer>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            fetch('index.html #header > nav').then(res => res.text()).then(data => {
-                document.querySelector('#header').innerHTML = data;
-                const hamburger = document.getElementById('hamburger');
-                const navLinks = document.getElementById('nav-links');
-                hamburger?.addEventListener('click', () => navLinks.classList.toggle('active'));
-            });
-            fetch('index.html #footer > .container').then(res => res.text()).then(data => {
-                document.querySelector('#footer').innerHTML = data;
-            });
-        });
-    </script>
 </body>
 </html>

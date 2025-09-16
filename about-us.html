@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - CompliMax</title>
+    <meta name="description" content="Learn about CompliMax's mission to simplify compliance and empower businesses with expert-led, cost-effective financial solutions.">
     <link rel="icon" href="https://complimax.com/wp-content/uploads/2025/03/cropped-CompliMax_Horizontal_Logo-removebg-1-32x32.png">
     <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
     <header class="main-header" id="header"></header>
@@ -19,10 +21,8 @@
         <section class="page-content">
             <div class="container">
                 <p>At CompliMax, we believe that businesses should focus on growth and innovation, not get bogged down by complex accounting, taxation, payroll, and compliance challenges. That’s why we provide expert-led, cost-effective financial solutions at just $5/hour, ensuring that your business remains fully compliant, penalty-free, and financially sound.</p>
-                
                 <h2>🚀 Our Mission</h2>
                 <p>To make compliance, taxation, and financial management seamless, affordable, and stress-free for businesses worldwide—helping them scale without worrying about regulatory burdens.</p>
-                
                 <h2>🏆 Why Businesses Trust Us</h2>
                 <ul>
                     <li>✔ Expert Chartered Accountants – Backed by professionals with experience at Flipkart, PwC, and ARS.</li>
@@ -30,7 +30,6 @@
                     <li>✔ 100% Compliance & Accuracy – Ensuring error-free tax filing, payroll processing, and financial reporting.</li>
                     <li>✔ 24/7 Dedicated Support – Our experts are always available to assist you anytime, anywhere.</li>
                 </ul>
-
                 <h2>🌍 Who We Serve</h2>
                 <p>We help startups, SMEs, and enterprises worldwide with:</p>
                 <ul>
@@ -41,7 +40,6 @@
                     <li>✅ Business Registration – Incorporation, ROC filings, and regulatory setup.</li>
                     <li>✅ Consultancy Services – AML, risk advisory, feasibility studies, and more.</li>
                 </ul>
-
                 <h2>💡 Meet Our Experts</h2>
                 <p>Our leadership team consists of seasoned Chartered Accountants who bring years of experience from top global firms and have helped hundreds of businesses achieve financial clarity and compliance excellence.</p>
                 <ul>
@@ -49,7 +47,6 @@
                     <li>👨‍💼 CA Pratham Bagrecha – Ex-ARS, Taxation & Compliance Expert</li>
                     <li>👨‍💼 CA Harsh Kaushik – Ex-PwC, Risk & Financial Reporting Expert</li>
                 </ul>
-
                 <h2>📞 Let’s Build a Compliant Future Together</h2>
                 <p>Need hassle-free compliance, accounting, or taxation support? Get started with CompliMax today!</p>
                 <p><strong>Contact Us:</strong><br>
@@ -95,20 +92,6 @@
     </main>
     <footer id="footer" class="main-footer"></footer>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            fetch('index.html #header > nav').then(res => res.text()).then(data => {
-                document.querySelector('#header').innerHTML = data;
-                const hamburger = document.getElementById('hamburger');
-                const navLinks = document.getElementById('nav-links');
-                hamburger?.addEventListener('click', () => navLinks.classList.toggle('active'));
-            });
-            fetch('index.html #footer > .container').then(res => res.text()).then(data => {
-                document.querySelector('#footer').innerHTML = data;
-            });
-        });
-    </script>
 </body>
 </html>

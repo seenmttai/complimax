@@ -1,3 +1,34 @@
+async function loadSharedChrome() {
+  try {
+    const base = window.location.pathname.includes('/blogs/') ? '../' : './';
+    const res = await fetch(`${base}index.html`);
+    if (!res.ok) throw new Error('Failed to fetch index.html');
+    const html = await res.text();
+
+    const doc = new DOMParser().parseFromString(html, 'text/html');
+
+    const nav = doc.querySelector('#header > nav');
+    if (nav) {
+      const header = document.getElementById('header');
+      header.innerHTML = '';
+      header.appendChild(nav.cloneNode(true));
+
+      const hamburger = document.getElementById('hamburger');
+      const navLinks = document.getElementById('nav-links');
+      hamburger?.addEventListener('click', () => navLinks.classList.toggle('active'));
+    }
+
+    const footContainer = doc.querySelector('#footer > .container');
+    if (footContainer) {
+      const footer = document.getElementById('footer');
+      footer.innerHTML = '';
+      footer.appendChild(footContainer.cloneNode(true));
+    }
+  } catch (e) {
+    console.error('Failed to load shared components:', e);
+  }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     AOS.init({
         duration: 800,
@@ -6,22 +37,13 @@ document.addEventListener('DOMContentLoaded', () => {
         mirror: false
     });
 
-    const hamburger = document.getElementById('hamburger');
-    const navLinks = document.getElementById('nav-links');
-    
-    hamburger?.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-        hamburger.classList.toggle('active');
-    });
-
-    document.querySelectorAll('.navbar-links a').forEach(link => {
-        link.addEventListener('click', () => {
-            if (navLinks.classList.contains('active')) {
-                navLinks.classList.remove('active');
-                hamburger.classList.remove('active');
-            }
-        });
-    });
+    if (document.body.id !== 'homepage') {
+        loadSharedChrome();
+    } else {
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
+        hamburger?.addEventListener('click', () => navLinks.classList.toggle('active'));
+    }
 
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
@@ -52,14 +74,6 @@ document.addEventListener('DOMContentLoaded', () => {
             header.classList.add('scrolled');
         } else {
             header.classList.remove('scrolled');
-        }
-    });
-
-    window.addEventListener('scroll', () => {
-        const scrolled = window.pageYOffset;
-        const parallax = document.querySelector('#hero');
-        if (parallax) {
-            parallax.style.backgroundPositionY = (scrolled * 0.5) + 'px';
         }
     });
 

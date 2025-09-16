@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog - CompliMax</title>
+    <meta name="description" content="Stay updated with expert insights on taxation, compliance, accounting, and financial management from the CompliMax blog.">
     <link rel="icon" href="https://complimax.com/wp-content/uploads/2025/03/cropped-CompliMax_Horizontal_Logo-removebg-1-32x32.png">
     <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
     <header class="main-header" id="header"></header>
@@ -59,20 +61,6 @@
     </main>
     <footer id="footer" class="main-footer"></footer>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            fetch('index.html #header > nav').then(res => res.text()).then(data => {
-                document.querySelector('#header').innerHTML = data;
-                const hamburger = document.getElementById('hamburger');
-                const navLinks = document.getElementById('nav-links');
-                hamburger?.addEventListener('click', () => navLinks.classList.toggle('active'));
-            });
-            fetch('index.html #footer > .container').then(res => res.text()).then(data => {
-                document.querySelector('#footer').innerHTML = data;
-            });
-        });
-    </script>
 </body>
 </html>

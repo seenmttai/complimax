@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Business Registration - CompliMax</title>
+    <meta name="description" content="Start your business in India hassle-free. CompliMax provides fast and efficient company incorporation, GST registration, and legal compliance services.">
     <link rel="icon" href="https://complimax.com/wp-content/uploads/2025/03/cropped-CompliMax_Horizontal_Logo-removebg-1-32x32.png">
     <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
     <header class="main-header" id="header"></header>
@@ -22,7 +24,6 @@
                 <p>Setting up a business in India can be overwhelming due to legal formalities, compliance requirements, and regulatory approvals. At Complimax, we ensure a smooth, fast, and efficient company registration process so you can focus on growing your business.</p>
                 <p>Our end-to-end incorporation services cover everything from entity selection and registration to compliance and taxation, making us your one-stop solution for business setup.</p>
                 <p><strong>📌 Get a free 30-minute consultation and kickstart your business journey today!</strong></p>
-                
                 <h2>💼 Our Business Registration Services</h2>
                 <h3>✅ Company Incorporation</h3>
                 <ul>
@@ -47,7 +48,6 @@
                     <li>Tax Advisory & Compliance Management</li>
                 </ul>
                 <p><strong>📌 We handle all the paperwork and regulatory processes—so you don’t have to!</strong></p>
-
                 <h2>🔹 Why Choose Complimax?</h2>
                 <ul>
                     <li>✔ Quick & Hassle-Free Process – Get your business registered in less than 7 days with expert guidance.</li>
@@ -97,18 +97,5 @@
     <footer id="footer" class="main-footer"></footer>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            fetch('index.html #header > nav').then(res => res.text()).then(data => {
-                document.querySelector('#header').innerHTML = data;
-                const hamburger = document.getElementById('hamburger');
-                const navLinks = document.getElementById('nav-links');
-                hamburger?.addEventListener('click', () => navLinks.classList.toggle('active'));
-            });
-            fetch('index.html #footer > .container').then(res => res.text()).then(data => {
-                document.querySelector('#footer').innerHTML = data;
-            });
-        });
-    </script>
 </body>
 </html>

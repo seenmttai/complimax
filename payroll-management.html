@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Payroll Management - CompliMax</title>
+    <meta name="description" content="Seamless and error-free payroll solutions. CompliMax handles salary processing, statutory compliance (PF, ESIC, TDS), and HR automation for your business.">
     <link rel="icon" href="https://complimax.com/wp-content/uploads/2025/03/cropped-CompliMax_Horizontal_Logo-removebg-1-32x32.png">
     <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
     <header class="main-header" id="header"></header>
@@ -22,7 +24,6 @@
                 <p>Managing payroll isn’t just about issuing paychecks—it involves compliance, tax calculations, deductions, and employee benefits management. At Complimax, we provide end-to-end payroll outsourcing solutions to ensure accurate, on-time salary processing while keeping your business 100% compliant with statutory regulations.</p>
                 <p>Our HR & payroll experts help businesses of all sizes eliminate payroll errors, reduce compliance risks, and save time, so you can focus on growing your business.</p>
                 <p><strong>📌 Say goodbye to payroll hassles—get precise, compliant, and automated payroll processing today!</strong></p>
-                
                 <h2>💼 Our Payroll Management Services</h2>
                 <div class="service-page-grid">
                     <div class="service-item"><h3>✅ Salary Processing & Payslip Generation</h3><p>Timely and accurate payroll processing. Automated salary disbursement & pay structure management.</p></div>
@@ -32,7 +33,6 @@
                     <div class="service-item"><h3>✅ Full & Final Settlement (F&F) Processing</h3><p>End-to-end exit management, including gratuity and settlement processing.</p></div>
                 </div>
                 <p><strong>📌 With Complimax, your payroll will always be processed on time, accurately, and in compliance with Indian labor laws.</strong></p>
-
                 <h2>🔹 Why Choose Complimax?</h2>
                 <ul>
                     <li>✔ 100% Compliance Assurance – No more worries about PF, ESIC, TDS, or labor law violations.</li>
@@ -82,18 +82,5 @@
     <footer id="footer" class="main-footer"></footer>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            fetch('index.html #header > nav').then(res => res.text()).then(data => {
-                document.querySelector('#header').innerHTML = data;
-                const hamburger = document.getElementById('hamburger');
-                const navLinks = document.getElementById('nav-links');
-                hamburger?.addEventListener('click', () => navLinks.classList.toggle('active'));
-            });
-            fetch('index.html #footer > .container').then(res => res.text()).then(data => {
-                document.querySelector('#footer').innerHTML = data;
-            });
-        });
-    </script>
 </body>
 </html>

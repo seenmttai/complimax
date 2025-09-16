@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CFO Services - CompliMax</title>
+    <meta name="description" content="Elevate your business with our virtual CFO services. Get strategic financial leadership, budgeting, and reporting at a fraction of the cost of a full-time CFO.">
     <link rel="icon" href="https://complimax.com/wp-content/uploads/2025/03/cropped-CompliMax_Horizontal_Logo-removebg-1-32x32.png">
     <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
     <header class="main-header" id="header"></header>
@@ -22,7 +24,6 @@
                 <p>In today’s fast-paced business environment, financial strategy and decision-making play a crucial role in success. However, hiring a full-time CFO can be costly for startups and small businesses. That’s where our Virtual CFO Services come in—providing expert financial guidance, budgeting, reporting, and compliance support at a fraction of the cost.</p>
                 <p>At Complimax, we offer part-time and outsourced CFO services that help businesses enhance financial performance, improve cash flow management, and ensure long-term financial stability.</p>
                 <p><strong>📌 Gain access to expert financial leadership—without the full-time salary commitment!</strong></p>
-                
                 <h2>💼 Our CFO Services Include:</h2>
                 <div class="service-page-grid">
                     <div class="service-item"><h3>✅ Financial Strategy & Planning</h3><p>Budgeting, forecasting, and financial goal setting. Identifying cost-saving opportunities for business growth.</p></div>
@@ -33,7 +34,6 @@
                     <div class="service-item"><h3>✅ Investor Relations & Fundraising Support</h3><p>Preparing financial models and projections for investors. Assisting in funding rounds and valuation analysis.</p></div>
                 </div>
                 <p><strong>📌 With Complimax’s Virtual CFO services, you get expert financial leadership without the cost of a full-time CFO.</strong></p>
-
                 <h2>🔹 Why Choose Complimax?</h2>
                 <ul>
                     <li>✔ Experienced Finance Experts – Our CFOs bring years of experience from global firms like Flipkart, PwC, and ARS.</li>
@@ -83,18 +83,5 @@
     <footer id="footer" class="main-footer"></footer>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            fetch('index.html #header > nav').then(res => res.text()).then(data => {
-                document.querySelector('#header').innerHTML = data;
-                const hamburger = document.getElementById('hamburger');
-                const navLinks = document.getElementById('nav-links');
-                hamburger?.addEventListener('click', () => navLinks.classList.toggle('active'));
-            });
-            fetch('index.html #footer > .container').then(res => res.text()).then(data => {
-                document.querySelector('#footer').innerHTML = data;
-            });
-        });
-    </script>
 </body>
 </html>
