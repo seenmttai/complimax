@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accounting Services - CompliMax</title>
+    <meta name="description" content="Streamline your accounting with CompliMax. We offer expert bookkeeping, financial reporting, reconciliation, and FP&A services to keep your business audit-ready.">
     <link rel="icon" href="https://complimax.com/wp-content/uploads/2025/03/cropped-CompliMax_Horizontal_Logo-removebg-1-32x32.png">
     <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
     <header class="main-header" id="header"></header>
@@ -21,7 +23,6 @@
                 <h2>🔹 Overview</h2>
                 <p>In today’s fast-changing business landscape, financial management is no longer just about record-keeping—it’s about driving business growth and strategic decision-making. At Complimax, we provide expert Accounting & Financial Outsourcing solutions to help businesses maintain accurate records, ensure compliance, and optimize financial performance.</p>
                 <p>Our team of Chartered Accountants and financial experts ensures error-free bookkeeping, accurate financial reporting, and regulatory compliance, so you can focus on business growth while we handle the numbers.</p>
-                
                 <h2>💼 Our Accounting & Financial Services</h2>
                 <div class="service-page-grid">
                     <div class="service-item"><h3>✅ Accounting & Financial Reporting</h3><p>Maintain accurate financial records, prepare financial statements, and ensure compliance with IND-AS, IFRS, and IGAAP.</p></div>
@@ -31,7 +32,6 @@
                     <div class="service-item"><h3>✅ Fund Accounting & Trust Accounting</h3><p>Specialized accounting for investment funds, trusts, and nonprofit organizations with complete compliance and reporting.</p></div>
                     <div class="service-item"><h3>✅ Finance Transformation & Automation</h3><p>Leverage technology-driven accounting solutions for efficiency, accuracy, and cost optimization.</p></div>
                 </div>
-
                 <h2>🔹 Why Choose Complimax?</h2>
                 <ul>
                     <li>✔ Expert Chartered Accountants – Our team brings experience from top financial firms, ensuring precision and compliance.</li>
@@ -80,20 +80,6 @@
     </main>
     <footer id="footer" class="main-footer"></footer>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            fetch('index.html #header > nav').then(res => res.text()).then(data => {
-                document.querySelector('#header').innerHTML = data;
-                const hamburger = document.getElementById('hamburger');
-                const navLinks = document.getElementById('nav-links');
-                hamburger?.addEventListener('click', () => navLinks.classList.toggle('active'));
-            });
-            fetch('index.html #footer > .container').then(res => res.text()).then(data => {
-                document.querySelector('#footer').innerHTML = data;
-            });
-        });
-    </script>
 </body>
 </html>
