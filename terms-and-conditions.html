@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms and Conditions - CompliMax</title>
+    <link rel="icon" href="https://complimax.com/wp-content/uploads/2025/03/cropped-CompliMax_Horizontal_Logo-removebg-1-32x32.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="main-header" id="header"></header>
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Terms and Conditions</h1>
+            </div>
+        </section>
+        <section class="page-content">
+            <div class="container">
+                <h2>Definitions</h2>
+                <p>“Company,” “We,” “Us,” or “Our” refers to CompliMax. “Client,” “User,” or “You” refers to anyone accessing or using our services. “Services” include accounting, taxation, payroll, CFO services, business registration, and compliance consulting offered by CompliMax.</p>
+                
+                <h2>Use of Our Services</h2>
+                <ul>
+                    <li>✔ You must be 18 years or older to use our services.</li>
+                    <li>✔ You agree to provide accurate and complete information for all service requests.</li>
+                    <li>✔ You may not use our services for any fraudulent, illegal, or unauthorized activities.</li>
+                </ul>
+
+                <h2>Payment Terms</h2>
+                <ul>
+                    <li>✔ Our pricing is $5/hour for compliance, taxation, and financial services.</li>
+                    <li>✔ Payments must be made as per the agreed billing cycle.</li>
+                    <li>✔ Late payments may result in service suspension or additional charges.</li>
+                    <li>✔ No refunds will be issued once a service has been rendered.</li>
+                </ul>
+
+                <h2>Confidentiality & Data Security</h2>
+                <ul>
+                    <li>✔ We ensure 100% confidentiality of all client data.</li>
+                    <li>✔ We implement ISO-certified security measures to protect financial records.</li>
+                    <li>✔ However, we are not liable for third-party security breaches beyond our control.</li>
+                </ul>
+
+                <h2>Limitation of Liability</h2>
+                <ul>
+                    <li>✔ CompliMax provides services “as-is” without any warranties.</li>
+                    <li>✔ We are not responsible for indirect, incidental, or consequential losses arising from our services.</li>
+                    <li>✔ In no event shall CompliMax’s liability exceed the total fees paid by the client for the specific service.</li>
+                </ul>
+
+                <h2>Termination of Services</h2>
+                <p>✔ We reserve the right to suspend or terminate services if a client violates these terms, there is non-payment beyond the due date, or fraudulent or illegal activities are detected. ✔ Clients may cancel services by providing written notice at least 7 days in advance.</p>
+
+                <h2>Intellectual Property</h2>
+                <p>✔ All content on our website (text, logos, service descriptions) is owned by CompliMax. ✔ You may not copy, distribute, or use our materials without prior written consent.</p>
+
+                <h2>Changes to Terms</h2>
+                <p>✔ We may update these Terms & Conditions at any time. Continued use of our services constitutes acceptance of the new terms.</p>
+
+                <h2>Governing Law & Dispute Resolution</h2>
+                <p>✔ These terms are governed by the laws of India. ✔ Any disputes will be resolved through arbitration in Ahmedabad, India.</p>
+
+                <h2>Contact Us</h2>
+                <p>For any questions regarding these Terms and Conditions, reach out to us:<br>
+                📌 CompliMax HO, Shahibaug, Ahmedabad, India – 380057<br>
+                📞 +91 8905209197<br>
+                📩 <a href="mailto:caprathambagrecha@gmail.com">caprathambagrecha@gmail.com</a></p>
+            </div>
+        </section>
+    </main>
+    <footer id="footer" class="main-footer"></footer>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            fetch('index.html #header > nav').then(res => res.text()).then(data => {
+                document.querySelector('#header').innerHTML = data;
+                const hamburger = document.getElementById('hamburger');
+                const navLinks = document.getElementById('nav-links');
+                hamburger?.addEventListener('click', () => navLinks.classList.toggle('active'));
+            });
+            fetch('index.html #footer > .container').then(res => res.text()).then(data => {
+                document.querySelector('#footer').innerHTML = data;
+            });
+        });
+    </script>
+</body>
+</html>

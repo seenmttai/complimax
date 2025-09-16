@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CFO Services - CompliMax</title>
+    <link rel="icon" href="https://complimax.com/wp-content/uploads/2025/03/cropped-CompliMax_Horizontal_Logo-removebg-1-32x32.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="main-header" id="header"></header>
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>CFO Services</h1>
+                <p class="section-subtitle">Strategic Financial Leadership Without the Cost of a Full-Time CFO</p>
+            </div>
+        </section>
+        <section class="page-content">
+            <div class="container">
+                <h2>🚀 Elevate Your Business with Our Virtual CFO Services</h2>
+                <p>In today’s fast-paced business environment, financial strategy and decision-making play a crucial role in success. However, hiring a full-time CFO can be costly for startups and small businesses. That’s where our Virtual CFO Services come in—providing expert financial guidance, budgeting, reporting, and compliance support at a fraction of the cost.</p>
+                <p>At Complimax, we offer part-time and outsourced CFO services that help businesses enhance financial performance, improve cash flow management, and ensure long-term financial stability.</p>
+                <p><strong>📌 Gain access to expert financial leadership—without the full-time salary commitment!</strong></p>
+                
+                <h2>💼 Our CFO Services Include:</h2>
+                <div class="service-page-grid">
+                    <div class="service-item"><h3>✅ Financial Strategy & Planning</h3><p>Budgeting, forecasting, and financial goal setting. Identifying cost-saving opportunities for business growth.</p></div>
+                    <div class="service-item"><h3>✅ Financial Reporting & Compliance</h3><p>Preparation of MIS reports, balance sheets, and financial statements. Compliance with IND-AS, IFRS, and IGAAP.</p></div>
+                    <div class="service-item"><h3>✅ Cash Flow & Fund Management</h3><p>Cash flow monitoring and liquidity planning. Investment strategy and working capital management.</p></div>
+                    <div class="service-item"><h3>✅ Profitability & Cost Optimization</h3><p>Identifying revenue improvement strategies. Expense control and operational efficiency enhancement.</p></div>
+                    <div class="service-item"><h3>✅ Tax Planning & Compliance Advisory</h3><p>Minimizing tax liabilities through strategic tax planning. Ensuring compliance with GST, Income Tax, and Corporate Tax laws.</p></div>
+                    <div class="service-item"><h3>✅ Investor Relations & Fundraising Support</h3><p>Preparing financial models and projections for investors. Assisting in funding rounds and valuation analysis.</p></div>
+                </div>
+                <p><strong>📌 With Complimax’s Virtual CFO services, you get expert financial leadership without the cost of a full-time CFO.</strong></p>
+
+                <h2>🔹 Why Choose Complimax?</h2>
+                <ul>
+                    <li>✔ Experienced Finance Experts – Our CFOs bring years of experience from global firms like Flipkart, PwC, and ARS.</li>
+                    <li>✔ Cost-Effective & Scalable – Get expert CFO services starting at just $5/hour, reducing overhead costs by up to 90%.</li>
+                    <li>✔ Custom-Tailored Solutions – Flexible engagement models to suit your business needs.</li>
+                    <li>✔ Data-Driven Decision Making – Real-time financial insights and reporting for better business planning.</li>
+                    <li>✔ 24/7 Support & Guidance – Dedicated financial experts available whenever you need them.</li>
+                </ul>
+                <p><strong>📌 Let Complimax handle your financial strategy, so you can focus on growing your business! 🚀</strong></p>
+            </div>
+        </section>
+        <section id="quote">
+            <div class="container">
+                <div class="quote-form" data-aos="fade-up">
+                    <h2>Request a Quote</h2>
+                    <form action="https://formsubmit.co/caprathambagrecha@gmail.com" method="POST">
+                        <input type="hidden" name="_next" value="https://complimax.netlify.app/thanks.html">
+                        <input type="hidden" name="_subject" value="New Quote Request from CFO Services Page!">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="text" name="_honey" style="display:none">
+                        <div class="form-group"><label for="name">Your Name</label><input type="text" id="name" name="name" class="form-control" required></div>
+                        <div class="form-group"><label for="business">Business Name (Optional)</label><input type="text" id="business" name="business" class="form-control"></div>
+                        <div class="form-row">
+                            <div class="form-group"><label for="email">Your Email</label><input type="email" id="email" name="email" class="form-control" required></div>
+                            <div class="form-group"><label for="phone">Phone Number</label><input type="tel" id="phone" name="phone" class="form-control" required></div>
+                        </div>
+                        <div class="form-group"><label for="country">Country Name</label><input type="text" id="country" name="country" class="form-control" required></div>
+                        <div class="form-group">
+                            <label for="service">Service You Need Help With</label>
+                            <select id="service" name="service" class="form-control" required>
+                                <option value="CFO Services" selected>CFO Services</option><option value="Accounting">Accounting</option><option value="Business Registration">Business Registration</option><option value="Consulting">Consulting</option><option value="Payroll">Payroll</option><option value="Taxation">Taxation</option><option value="Other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="consultation">Preferred Consultation Mode</label>
+                            <select id="consultation" name="consultation" class="form-control" required>
+                                <option value="">Select consultation mode...</option><option value="WhatsApp">WhatsApp</option><option value="Phone Call">Phone Call</option><option value="Zoom">Zoom</option>
+                            </select>
+                        </div>
+                        <div class="form-group"><label for="message">Additional Message (Optional)</label><textarea id="message" name="message" class="form-control" rows="4"></textarea></div>
+                        <button type="submit" class="submit-btn">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer id="footer" class="main-footer"></footer>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            fetch('index.html #header > nav').then(res => res.text()).then(data => {
+                document.querySelector('#header').innerHTML = data;
+                const hamburger = document.getElementById('hamburger');
+                const navLinks = document.getElementById('nav-links');
+                hamburger?.addEventListener('click', () => navLinks.classList.toggle('active'));
+            });
+            fetch('index.html #footer > .container').then(res => res.text()).then(data => {
+                document.querySelector('#footer').innerHTML = data;
+            });
+        });
+    </script>
+</body>
+</html>

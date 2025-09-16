@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You - CompliMax</title>
+    <link rel="icon" href="https://complimax.com/wp-content/uploads/2025/03/cropped-CompliMax_Horizontal_Logo-removebg-1-32x32.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="main-header" id="header"></header>
+    <main>
+        <section class="page-header" style="min-height: 60vh; display: flex; align-items: center;">
+            <div class="container">
+                <h1>Thank You!</h1>
+                <p class="section-subtitle">Your submission has been received. Our team will get in touch with you shortly.</p>
+                <a href="index.html" class="btn btn-primary">Return to Homepage</a>
+            </div>
+        </section>
+    </main>
+    <footer id="footer" class="main-footer"></footer>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            fetch('index.html #header > nav').then(res => res.text()).then(data => {
+                document.querySelector('#header').innerHTML = data;
+                const hamburger = document.getElementById('hamburger');
+                const navLinks = document.getElementById('nav-links');
+                hamburger?.addEventListener('click', () => navLinks.classList.toggle('active'));
+            });
+            fetch('index.html #footer > .container').then(res => res.text()).then(data => {
+                document.querySelector('#footer').innerHTML = data;
+            });
+        });
+    </script>
+</body>
+</html>

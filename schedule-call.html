@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule a Call - CompliMax</title>
+    <link rel="icon" href="https://complimax.com/wp-content/uploads/2025/03/cropped-CompliMax_Horizontal_Logo-removebg-1-32x32.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="main-header" id="header"></header>
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Schedule a Call with our Chartered Accountant</h1>
+                <p class="section-subtitle">Talk to a Compliance & Accounting Expert—At Your Convenience!</p>
+            </div>
+        </section>
+        <section class="page-content">
+            <div class="container">
+                <p>Need guidance on tax filings, financial planning, business setup, or compliance regulations? Schedule a call with our experts at a time that suits you.</p>
+                <h3>📌 Why Schedule a Call with Us?</h3>
+                <ul>
+                    <li>✔ One-on-One Expert Guidance</li>
+                    <li>✔ Tailored Solutions for Your Business</li>
+                    <li>✔ No Obligation, No Hidden Charges</li>
+                </ul>
+                <div class="quote-form" data-aos="fade-up" style="margin-top: 2rem;">
+                    <h2>📞 Pick a Time That Works for You!</h2>
+                    <form action="https://formsubmit.co/caprathambagrecha@gmail.com" method="POST">
+                        <input type="hidden" name="_next" value="https://complimax.netlify.app/thanks.html">
+                        <input type="hidden" name="_subject" value="New Scheduled Call Request!">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="text" name="_honey" style="display:none">
+                        <div class="form-group"><label for="name">Your Name</label><input type="text" id="name" name="name" class="form-control" required></div>
+                        <div class="form-group"><label for="business">Business Name (Optional)</label><input type="text" id="business" name="business" class="form-control"></div>
+                        <div class="form-row">
+                            <div class="form-group"><label for="email">Your Email</label><input type="email" id="email" name="email" class="form-control" required></div>
+                            <div class="form-group"><label for="phone">Phone Number</label><input type="tel" id="phone" name="phone" class="form-control" required></div>
+                        </div>
+                        <div class="form-group"><label for="country">Country Name</label><input type="text" id="country" name="country" class="form-control" required></div>
+                        <div class="form-row">
+                            <div class="form-group"><label for="call-date">Preferred Call Date</label><input type="date" id="call-date" name="Preferred Call Date" class="form-control" required></div>
+                            <div class="form-group"><label for="call-time">Preferred Call Time</label><input type="time" id="call-time" name="Preferred Call Time" class="form-control" required></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Topic of Discussion</label>
+                            <select id="service" name="Topic of Discussion" class="form-control" required>
+                                <option value="">Select a topic...</option><option value="Accounting">Accounting</option><option value="CFO Services">CFO Services</option><option value="Business Registration">Business Registration</option><option value="Consulting">Consulting</option><option value="Payroll">Payroll</option><option value="Taxation">Taxation</option><option value="Other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group"><label for="message">Additional Notes (Optional)</label><textarea id="message" name="Additional Notes" class="form-control" rows="4"></textarea></div>
+                        <button type="submit" class="submit-btn">Schedule Call</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer id="footer" class="main-footer"></footer>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            fetch('index.html #header > nav').then(res => res.text()).then(data => {
+                document.querySelector('#header').innerHTML = data;
+                const hamburger = document.getElementById('hamburger');
+                const navLinks = document.getElementById('nav-links');
+                hamburger?.addEventListener('click', () => navLinks.classList.toggle('active'));
+            });
+            fetch('index.html #footer > .container').then(res => res.text()).then(data => {
+                document.querySelector('#footer').innerHTML = data;
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - CompliMax</title>
+    <link rel="icon" href="https://complimax.com/wp-content/uploads/2025/03/cropped-CompliMax_Horizontal_Logo-removebg-1-32x32.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="main-header" id="header"></header>
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Contact Us</h1>
+                <p class="section-subtitle">Get in Touch with Complimax. Expert-Led Compliance, Taxation & Accounting—Just $5/Hour!</p>
+            </div>
+        </section>
+        <section class="page-content">
+            <div class="container">
+                <p>Have questions about accounting, taxation, payroll, or compliance? Our experts are here to assist you. Reach out to us, and we’ll ensure hassle-free financial management for your business.</p>
+                <div class="contact-grid">
+                    <div class="contact-card">
+                        <h3>Instant Free Consultation</h3>
+                        <p>Get personalized advice on taxation, payroll, or compliance.</p>
+                        <a href="instant-free-consultation.html" class="btn btn-primary">Get Instant Call Back</a>
+                    </div>
+                    <div class="contact-card">
+                        <h3>Schedule a Call</h3>
+                        <p>Speak directly with our finance experts and discuss your business needs.</p>
+                        <a href="schedule-call.html" class="btn btn-secondary">Schedule a Call</a>
+                    </div>
+                </div>
+                <div style="text-align: center; margin-top: 3rem;">
+                    <h2>📞 Call Us 24/7 at +91 8905209197</h2>
+                    <h2>📩 Email: caprathambagrecha@gmail.com</h2>
+                    <a href="https://wa.me/918905209197?text=Hi%20CompliMax!" class="btn btn-primary" style="background: #25d366; margin-top: 1rem;">💬 Connect Instantly on WhatsApp</a>
+                </div>
+                <div style="margin-top: 3rem;">
+                    <h2>📍 Our Office</h2>
+                    <p>📌 CompliMax HO, Shahibaug, Ahmedabad, India – 380057</p>
+                </div>
+            </div>
+        </section>
+        <section id="quote">
+            <div class="container">
+                <div class="quote-form" data-aos="fade-up">
+                    <h2>📩 Send Us a Message</h2>
+                    <p>We respond within 24 hours! Need urgent help? Call us anytime—our support is available 24/7.</p>
+                    <form action="https://formsubmit.co/caprathambagrecha@gmail.com" method="POST">
+                        <input type="hidden" name="_next" value="https://complimax.netlify.app/thanks.html">
+                        <input type="hidden" name="_subject" value="New Message from Contact Us Page!">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="text" name="_honey" style="display:none">
+                        <div class="form-group"><label for="name">Your Name</label><input type="text" id="name" name="name" class="form-control" required></div>
+                        <div class="form-group"><label for="email">Your Email</label><input type="email" id="email" name="email" class="form-control" required></div>
+                        <div class="form-group"><label for="message">Your Message</label><textarea id="message" name="message" class="form-control" rows="5" required></textarea></div>
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer id="footer" class="main-footer"></footer>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            fetch('index.html #header > nav').then(res => res.text()).then(data => {
+                document.querySelector('#header').innerHTML = data;
+                const hamburger = document.getElementById('hamburger');
+                const navLinks = document.getElementById('nav-links');
+                hamburger?.addEventListener('click', () => navLinks.classList.toggle('active'));
+            });
+            fetch('index.html #footer > .container').then(res => res.text()).then(data => {
+                document.querySelector('#footer').innerHTML = data;
+            });
+        });
+    </script>
+</body>
+</html>
