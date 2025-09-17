@@ -1,7 +1,7 @@
 backend:
   name: git-gateway
   branch: master
-site_url: https://complimax.netlify.app
+site_url: https://complimax.pages.dev
 
 media_folder: "assets/images"
 public_folder: "/assets/images"
