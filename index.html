@@ -63,6 +63,18 @@
         .footer-socials .icon-btn:hover {
             background: #333;
         }
+
+        .pricing-features li::before {
+            content: none; 
+        }
+        .pricing-features .check-icon {
+            width: 1.2em; 
+            height: 1.2em;
+            color: var(--success); 
+            flex-shrink: 0; 
+            margin-top: 0.2em; 
+            stroke-width: 3; /
+        }
     </style>
 </head>
 <body id="homepage">
@@ -268,10 +280,22 @@
                         <div class="price">$5<span>/Hour</span></div>
                     </div>
                     <ul class="pricing-features">
-                        <li>Lowest in the Industry – Just $5/Hour! Get expert taxation, payroll, and accounting solutions with 100% compliance assurance.</li>
-                        <li>No Hidden Charges – Transparent, pay-as-you-go pricing—only pay for the services you use, with no long-term commitments.</li>
-                        <li>Scale as Needed – No rigid contracts, increase or decrease hours based on your business demands.</li>
-                        <li>24/7 Expert Support – The CompliMax team is always just a call away, ready to assist you anytime!</li>
+                        <li>
+                            <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            <span>Lowest in the Industry – Just $5/Hour! Get expert taxation, payroll, and accounting solutions with 100% compliance assurance.</span>
+                        </li>
+                        <li>
+                            <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            <span>No Hidden Charges – Transparent, pay-as-you-go pricing—only pay for the services you use, with no long-term commitments.</span>
+                        </li>
+                        <li>
+                            <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            <span>Scale as Needed – No rigid contracts, increase or decrease hours based on your business demands.</span>
+                        </li>
+                        <li>
+                            <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            <span>24/7 Expert Support – The CompliMax team is always just a call away, ready to assist you anytime!</span>
+                        </li>
                     </ul>
                     <a href="get-started.html" class="btn btn-primary">Get Started</a>
                 </div>
