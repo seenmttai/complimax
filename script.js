@@ -31,7 +31,7 @@ async function loadSharedChrome() {
 
 document.addEventListener('DOMContentLoaded', () => {
     AOS.init({
-        duration: 800,
+        duration: 300, 
         easing: 'ease-in-out',
         once: true,
         mirror: false
