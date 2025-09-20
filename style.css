@@ -225,7 +225,7 @@ p { margin-bottom: 1rem; color: var(--text-secondary); }
 .hero-content h1 { color: var(--white); margin-bottom: 1.5rem; font-weight: 800; text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); }
 .hero-content h1 strong { font-weight: 800; }
 .hero-content h1 .highlight { background: linear-gradient(135deg, var(--warning), #ff6b35); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; position: relative; }
-.hero-content p { font-size: 1.25rem; max-width: 700px; margin: 0 auto 3rem; opacity: 0.95; color: #e2e8f0; }
+.hero-content p { font-size: 1.25rem; max-width: 700px; margin: 0 auto 3rem; opacity: 0.65; color: #e2e8f0; }
 .hero-buttons { display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; }
 .hero-stats { display: flex; justify-content: center; gap: 4rem; margin-top: 4rem; flex-wrap: wrap; }
 .hero-stat { text-align: center; }
