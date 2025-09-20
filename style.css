@@ -200,7 +200,7 @@ p { margin-bottom: 1rem; color: var(--text-secondary); }
 .hamburger span { display: block; width: 20px; height: 3px; background: var(--text-primary); transition: 0.3s; border-radius: 2px; }
 
 #hero {
-    background: linear-gradient(135deg, rgba(18, 28, 39, 0.9), rgba(15, 23, 42, 0.85)), url('https://complimax.com/wp-content/themes/nas-consulting-lite/assets/images/banner_bg.jpg');
+    background: linear-gradient(135deg, rgba(18, 28, 39, 0.7), rgba(15, 23, 42, 0.65)), url('https://complimax.com/wp-content/themes/nas-consulting-lite/assets/images/banner_bg.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
