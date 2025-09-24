@@ -1,6 +1,6 @@
 async function loadSharedChrome() {
   try {
-    const base = window.location.pathname.includes('/blogs/') ? '../' : './';
+    const base = window.location.pathname.includes('/blogs/') ? 'https://complimax.pages.dev/' : './';
     const res = await fetch(`${base}index.html`);
     if (!res.ok) throw new Error('Failed to fetch index.html');
     const html = await res.text();
