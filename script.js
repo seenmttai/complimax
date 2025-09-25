@@ -1,8 +1,8 @@
 async function loadSharedChrome() {
   try {
     const base = window.location.pathname.includes('/blogs/') ? 'https://complimax.pages.dev/' : './';
-    const res = await fetch(`${base}index.html`);
-    if (!res.ok) throw new Error('Failed to fetch index.html');
+    const res = await fetch(`${base}index/`);
+    if (!res.ok) throw new Error('Failed to fetch index/');
     const html = await res.text();
 
     const doc = new DOMParser().parseFromString(html, 'text/html');
@@ -96,7 +96,7 @@ async function loadBlogs() {
             displayBlogs(posts.slice(0, 3), blogGridHome);
             const exploreBtnContainer = document.querySelector('.blog-btn-container');
             if(exploreBtnContainer) {
-                exploreBtnContainer.innerHTML = `<a href="blog.html" class="btn btn-secondary">Explore All Articles</a>`;
+                exploreBtnContainer.innerHTML = `<a href="blog/" class="btn btn-secondary">Explore All Articles</a>`;
             }
         }
 
