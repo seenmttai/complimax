@@ -91,9 +91,8 @@ async function loadBlogs() {
         
         const { posts } = await response.json(); 
 
-        const blogGridHome = document.querySelector('#blog .blog-grid');
         if (blogGridHome) {
-            displayBlogs(posts.slice(0, 3), blogGridHome);
+            displayBlogs(posts.slice(0, 3), blogGridHome, true); // true to omit date
             const exploreBtnContainer = document.querySelector('.blog-btn-container');
             if(exploreBtnContainer) {
                 exploreBtnContainer.innerHTML = `<a href="blog/" class="btn btn-secondary">Explore All Articles</a>`;
@@ -111,7 +110,7 @@ async function loadBlogs() {
     }
 }
 
-function displayBlogs(blogs, container) {
+function displayBlogs(blogs, container, omitDate = false) {
     container.innerHTML = '';
     if (!blogs || blogs.length === 0) {
         container.innerHTML = '<p style="text-align:center;">No blog posts found.</p>';
@@ -122,18 +121,18 @@ function displayBlogs(blogs, container) {
         blogCard.className = 'blog-card';
         blogCard.setAttribute('data-aos', 'fade-up');
         blogCard.setAttribute('data-aos-delay', (index % 3 + 1) * 100);
-        blogCard.innerHTML = createBlogCardHTML(blog);
+        blogCard.innerHTML = createBlogCardHTML(blog, omitDate);
         container.appendChild(blogCard);
     });
 }
 
-function createBlogCardHTML(blog) {
+function createBlogCardHTML(blog, omitDate = false) {
     return `
         <div class="blog-card-content">
             <span class="tag">${blog.tag || 'General'}</span>
             <h4><a href="${blog.link}">${blog.title}</a></h4>
             <p class="blog-summary">${blog.summary || ''}</p>
-            <div class="date">${blog.date || ''}</div>
+            ${omitDate ? '' : `<div class="date">${blog.date || ''}</div>`}
         </div>
     `;
 }
